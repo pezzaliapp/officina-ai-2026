@@ -179,6 +179,9 @@ Ordine: 1.Centraggio 2.Ripetibilità 3.Runout cerchio 4.Runout gomma 5.Veicolo`;
 const KB_SMONTAGOMME = `SMONTAGOMME CORMACH — MODELLI E DATI TECNICI:
 Prezzi sempre su richiesta → cormach@cormachsrl.com | www.cormachsrl.com
 
+⚠️ CORMACH PRODUCE E VENDE SMONTAGOMME per auto, moto e camion.
+Gamma completa: da entry-level (BASIC 124/224) a superautomatici run flat (CM 1200BB, PUMA, LIGRO, F536S GT RACING), per moto (F 26A/F 24 BIKE), per camion (FT 600 HY, Super Vigor 60"/2450N, CM Super 56N/27", FT 560SN, FT 26SN, TMS 26").
+
 SMONTAGOMME AUTO:
 • CM 1200BB MI [00100210]: superautomatico ribassati/run flat/canale rovescio. Doppio disco stallonatura (BB). Ø max 1080mm. Cerchio 12"-28". Forza 5500N. 8-10 BAR. 400 Kg.
 • PUMA MI [00100208]: superautomatico ribassati/run flat. Ø max 1200mm. Cerchio 12"-30". Forza 7600N. Ribaltamento furgoni opzionale. 328 Kg.
@@ -216,6 +219,9 @@ PROBLEMI COMUNI SMONTAGOMME:
 
 const KB_SOLLEVATORI = `SOLLEVATORI E PONTI CORMACH — DATI TECNICI:
 Prezzi sempre su richiesta → cormach@cormachsrl.com | www.cormachsrl.com
+
+⚠️ CORMACH PRODUCE E VENDE PONTI SOLLEVATORI per assetto ruote e per officina.
+Gamma ponti Cormach: PFA 40, PFA 50 (ponti forbice per assetto ruote), L 3100/L 3300/L 3300 EVO/L 3400/L 3500 EVO (ponti doppia forbice ribassati per officina, altezza sollevamento fino a 1900mm, capacità da 3000 a 4000 Kg), L 40/L 45 (ponti a 2 colonne), WL 85 MOVE (colonne mobili), L 96 BIKE (per moto).
 
 PONTI PER ASSETTO RUOTE (forbice con libera-ruote):
 • PFA 40 [05100369]: capacità 4000 Kg. Alt max 2160mm, min 290mm. Pedane 4800mm. Sollevatore Lift Tables 4000 Kg integrato, apertura 1500-2000mm. 400V 3ph. 6-8 bar. 2510 Kg. Fotocellula sicurezza, livellamento automatico, predisposto assetto 3D, pompa manuale emergenza, canaline+tasselli inclusi. Colore grigio RAL7016 + rampe gialle da mag 2024.
@@ -293,7 +299,7 @@ function selectKB(text) {
   if (/err\s*0?\d+|errore|dis.?out|lar.?out|no.?stp|no.?spn|shf|w.?guard|no.?vrt|no.?dia|no.?lar|no.?opt/i.test(q)) parts.push(KB_ERRORI);
   if (/vibr|trema|squilibr|runout|centraggio|bilanc|pesa/i.test(q)) parts.push(KB_VIBRAZIONI);
   if (/smontagomm|puma|ligro|cm.?1200|f.?535|f.?536|f.?524|f.?528|basic.?1|basic.?2|super.?vigor|tms.?26|ft.?26|ft.?560|ft.?600|aria|cilindro|bead|braccio|torretta|stallona/i.test(q)) parts.push(KB_SMONTAGOMME);
-  if (/sollevator|ponte|cascos|ilc|colonne|sale|scende|forbicc|pfa|wl.?85|l.?3[0-9]{3}|l.?40|l.?45|l.?96|l.?150/i.test(q)) parts.push(KB_SOLLEVATORI);
+  if (/sollevator|ponte|cascos|ilc|colonne|sale|scende|forbicc|pfa|wl.?85|l.?3[0-9]{3}|l.?40|l.?45|l.?96|l.?150|alzata|forbice|2.colonne/i.test(q)) parts.push(KB_SOLLEVATORI);
   if (/assetto|geo\s*\d|wr.?328|convergenz|inclinaz|caster|toe|camber|allineament/i.test(q)) parts.push(KB_ASSETTI);
   if (/ammortizzator|smontamm|sa.?1200|sa.?2500/i.test(q)) parts.push(KB_SMONTAMM);
   if (/handy.?scan|battistrada|profond|targa|scanner/i.test(q)) parts.push(KB_HANDY);

@@ -289,6 +289,9 @@ Scanner per lettura profondità battistrada e accettazione veicolo.
 Misura 0-10mm con precisione 0,1mm. Red Laser Class 1 IEC. WiFi. 113 MP. Batteria standby 40h. Fotocamera integrata per riconoscimento targa. Include Handy Scan Manager Software. Peso 415g.
 Per info: cormach@cormachsrl.com | www.cormachsrl.com`;
 
+// KB registry - forza inclusione nel bundle
+const ALL_KB = [KB_CALIBRAZIONE, KB_CAL_MOTO, KB_ERRORI, KB_VIBRAZIONI, KB_SMONTAGOMME, KB_SOLLEVATORI, KB_ASSETTI, KB_SMONTAMM, KB_HANDY];
+
 function selectKB(text) {
   const q = text.toLowerCase();
   const parts = [];

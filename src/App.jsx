@@ -176,17 +176,112 @@ const KB_VIBRAZIONI = `DIAGNOSI VIBRAZIONI:
 - Al volante → asse anteriore; al sedile → asse posteriore
 Ordine: 1.Centraggio 2.Ripetibilità 3.Runout cerchio 4.Runout gomma 5.Veicolo`;
 
-const KB_SMONTAGOMME = `SMONTAGOMME CORMACH (PUMA, CM1200BB, F535S, F536S, LIGRO):
-- Perdita aria cilindro → guarnizioni usurate, raccordi allentati. Verificare pressione min 8bar, controllare raccordi
-- Braccio non scende → pressione bassa, blocco meccanico, olio esaurito
-- Testa non ruota → motore, cinghia, finecorsa
-- Bead breaker non funziona → pressione insufficiente, usura lame`;
+const KB_SMONTAGOMME = `SMONTAGOMME CORMACH — MODELLI E DATI TECNICI:
+Prezzi sempre su richiesta → cormach@cormachsrl.com | www.cormachsrl.com
 
-const KB_SOLLEVATORI = `SOLLEVATORI CASCOS (C-3.2, C-3.5, C-4, C-5, C-5.5, C-125):
+SMONTAGOMME AUTO:
+• CM 1200BB MI [00100210]: superautomatico ribassati/run flat/canale rovescio. Doppio disco stallonatura (BB). Ø max 1080mm. Cerchio 12"-28". Forza 5500N. 8-10 BAR. 400 Kg.
+• PUMA MI [00100208]: superautomatico ribassati/run flat. Ø max 1200mm. Cerchio 12"-30". Forza 7600N. Ribaltamento furgoni opzionale. 328 Kg.
+• LIGRO MI [00100347] / LIGRO GT MI [00100348]: automatico. Asta Ø38mm. Cerchi 10"-26". Bloccaggio 10"-24" est / 13"-26" int. Forza 2800 Kg. 256/269 Kg.
+• F 536S GT RACING MI [00100301]: automatico ribassati/run flat/sportivi. Asta Ø45mm. Cerchi 12"-26". 3000 Kg. 318 Kg.
+• F 528S GT MI [00100365]: semiautomatico braccio bandiera. Asta Ø45mm. Cerchi 12"-30". Motoinverter. 240 Kg.
+• F 535S [00100330] / F 535S GT [00100331]: automatico. Asta Ø45mm. Cerchi 10"-24". 2500 Kg. 238-249 Kg.
+• F 524S [00100321]: automatico. Asta Ø41mm. Cerchi 10"-24". Singola/doppia velocità o MI. 211-222 Kg.
+• F 524 SW [00100323]: semiautomatico braccio bandiera manuale. Cerchi 10"-24". 191 Kg.
+• BASIC 124 [00101082]: semiautomatico. Cerchi 10"-20". 215 Kg.
+• BASIC 224 [00101084]: automatico. Cerchi 10"-20". 307 Kg.
+
+SMONTAGOMME MOTO:
+• F 26A BIKE [00100299]: automatico. Cerchi 6"-26". Kit 4 adattatori moto inclusi. 250 Kg.
+• F 24 BIKE [00101056]: semiautomatico braccio bandiera. Cerchi 6"-24". 174 Kg.
+• BASIC 22 BIKE [00101081]: semiautomatico. Cerchi 8"-22". 190 Kg.
+
+SMONTAGOMME CAMION:
+• FT 600 HY [00201030]: automatico. Cerchi 14"-60". Wireless WiFi. 2200 Kg.
+• SUPER VIGOR 60" [00200037]: automatico. Cerchi 14"-60". Piattaforma inclusa. 1400 Kg.
+• SUPER VIGOR 2450N [00200034]: automatico. Cerchi 14"-56". Stand-by energetico. 1200 Kg.
+• CM SUPER 56N [00200025]: semiautomatico. Cerchi 14"-56". 740 Kg.
+• FT 560SN [00201023]: semiautomatico. Cerchi 14"-56". 728 Kg.
+• CM SUPER 27" [00200013]: semiautomatico. Cerchi 13"-27". Struttura compatta mobile. 560 Kg.
+• FT 26SN [00201025]: semiautomatico. Cerchi 14"-26". 586 Kg.
+• TMS 26" [00201022]: per furgoni attrezzati. Cerchi 13"-26". Anche con compressore+generatore diesel.
+• MTB [01201003]: equilibratrice universale per smontagomme camion. Programmi Dinamica/Statica/ALU. 12dc/230V. 20 Kg.
+
+PROBLEMI COMUNI SMONTAGOMME:
+- Perdita aria cilindro → guarnizioni usurate, raccordi allentati. Verificare pressione min 8 bar.
+- Braccio non scende → pressione bassa (<8 bar), blocco meccanico, olio esaurito
+- Testa non ruota → motore, cinghia, finecorsa
+- Bead breaker non funziona → pressione insufficiente, usura lame
+- Torretta bloccata → valvola comando pneumatico, perdita pressione, lubrificazione`;
+
+const KB_SOLLEVATORI = `SOLLEVATORI E PONTI CORMACH — DATI TECNICI:
+Prezzi sempre su richiesta → cormach@cormachsrl.com | www.cormachsrl.com
+
+PONTI PER ASSETTO RUOTE (forbice con libera-ruote):
+• PFA 40 [05100369]: capacità 4000 Kg. Alt max 2160mm, min 290mm. Pedane 4800mm. Sollevatore Lift Tables 4000 Kg integrato, apertura 1500-2000mm. 400V 3ph. 6-8 bar. 2510 Kg. Fotocellula sicurezza, livellamento automatico, predisposto assetto 3D, pompa manuale emergenza, canaline+tasselli inclusi. Colore grigio RAL7016 + rampe gialle da mag 2024.
+• PFA 50 [05100367]: come PFA 40 ma capacità 5000 Kg. Pedane 5000mm. Apertura 1600-2200mm. 2600 Kg.
+
+PONTI FORBICE RIBASSATI:
+• L 3500 EVO [05100353/05100368]: 3500 Kg. Alt 105-1900mm. 400V/230V. 50 sec. 1090 Kg. Prolunghe estraibili. Telaio incasso disponibile.
+• L 3400 [05100316/05100324]: 4000 Kg. Alt 105-1900mm. 400V/230V. 60 sec. 1035 Kg. Rampe basculanti. Colore grigio RAL7016 da mag 2024.
+• L 3300 EVO [05100285/05100322]: 3000 Kg. Alt 112-1900mm. 400V/230V. 55 sec. 830 Kg. Per city cars. Rampe removibili. Telaio incasso disponibile.
+• L 3300 [05100319/05100323]: 3000 Kg. Alt 116-1900mm. 400V/230V. 55 sec. 830 Kg. Colore grigio RAL7016 da mag 2024.
+• L 3100 [05100351/05100377]: 3200 Kg. Alt 110-1000mm. 400V 3ph. 40 sec. 569 Kg. Ideale gommisti/carrozzerie.
+• L 1500 AUTOMATIC [05100342]: mobile a forbice. 1500 Kg. Alt 740-1800mm. 230V. 29 sec. 750 Kg. Inclinazione ±6° via telecomando. Per motori e batterie.
+
+PONTI 2 COLONNE:
+• L 40 [05100361]: 4000 Kg. Bracci 98-1900mm (con prolunga 2850mm). 400V 3ph. 45 sec. 190 bar. 670 Kg. Passaggio 2600mm. Bracci telescopici.
+• L 45 [05100360]: 4500 Kg. Bracci 98-1900mm (con prolunga 5000mm). 400V 3ph. 60 sec. 830 Kg. Passaggio 2600mm.
+
+COLONNE MOBILI:
+• WL 85 MOVE [05100354]: 8500 Kg/colonna. Alt max 1750mm. Forche 204-624mm. WiFi. Touch LCD. Sincronizzazione ±50mm. Batteria 80AH. Modulare 4-16 colonne. 2,2 kW.
+
+PONTI PER MOTO:
+• L 96 PE BIKE [05100008]: a pedale (no elettrico). 500 Kg. Alt 140-1000mm. 135 Kg.
+• L 96 EL BIKE [05100009]: elettroidraulico. 500 Kg. Alt 140-1000mm. 230V. 10-12 sec. 150 Kg.
+
+SOLLEVATORI CASCOS (ponti 2 colonne):
+Modelli: C-3.2, C-3.5, C-4, C-5, C-5.5, C-125, C430/C440/C450 — con o senza pedana, con ILC (syncro)
 - Non sale/sale storto → livello olio basso, ILC non sincronizzato, sicurezze attivate
-- Bloccato → sblocco manuale emergenza (vedi manuale modello)
+- Bloccato → sblocco manuale emergenza (vedi manuale modello specifico)
 - Rumore anomalo → cuscinetti, pompa idraulica, livello olio
-- ILC non sincronizza → batteria, sensori livello, firmware`;
+- ILC non sincronizza → batteria, sensori livello, firmware
+
+PROBLEMI COMUNI PONTI/SOLLEVATORI:
+- PFA 40/50 non si livella → fotocellula sicurezza, sistema livellamento automatico, centralina
+- Ponte forbice non scende → valvola controllo discesa, olio, valvola paracadute
+- Colonne WL85 non sincronizzano → batteria scarica, sensori, firmware
+- L 40/L 45 sale storto → cavo acciaio sincronizzazione, olio nelle colonne`;
+
+const KB_ASSETTI = `ASSETTI RUOTE CORMACH — DATI TECNICI:
+Prezzi sempre su richiesta → cormach@cormachsrl.com | www.cormachsrl.com
+
+• WR 328A [03100074]: CCD, monitor LCD, radio 2,4 GHz, 8 sensori. Banca dati veicoli personalizzabile. Programmi: volanti storti, spoiler, 2x fuori centro. Predisposto camion/rimorchi. 118 Kg.
+• GEO 10 [03100094]: CCD, monitor LCD, radio 2,4 GHz, livelle elettroniche su ogni sensore. Banca dati 40.000 veicoli. Kit 4 attacchi 11"-26" inclusi. 149 Kg.
+• GEO 15 [03100077/03100081/03100090]: 3D, monitor 27", Drive-On Assistant incluso standard, target a scacchiera antiriflesso. Kit 4 attacchi 11"-26" inclusi. Versioni: Standard, FLAT 2VD (2 monitor), SMART (senza Drive-On).
+• GEO 20 [03100085/03100086]: 3D alta risoluzione, monitor 27". Target leggeri antiriflesso. Kit 4 attacchi 11"-26" e 2 piattelli girevoli inclusi. Drive-On-Assistant e Up&Down opzionali. 222 Kg. Versione 2VD con 2 monitor disponibile.
+
+PROBLEMI COMUNI ASSETTI:
+- Sensori non comunicano → batterie Ni-MH scariche, interferenze radio 2,4 GHz, canale occupato
+- Dati non plausibili → piattelli girevoli non posizionati, blocca freno/sterzo non inseriti, sensori mal posizionati
+- Banca dati obsoleta → procedura aggiornamento da USB (accessorio opzionale)`;
+
+const KB_SMONTAMM = `SMONTAMMORTIZZATORI CORMACH — DATI TECNICI:
+Prezzi sempre su richiesta → cormach@cormachsrl.com | www.cormachsrl.com
+
+• SA 1200 [36100002]: 1,2 ton. Pneumatico. Bracci superiori auto-livellanti. Cilindro alluminio/nylon/fibra vetro (anti-corrosione). Valvola interblocco: funziona SOLO con gabbia completamente chiusa. 2 valvole di blocco cilindro. Corsa 330mm. 8 bar. 611x556x1690mm. 55 Kg.
+• SA 2500 [36100003]: 2,5 ton. Stesse caratteristiche SA 1200. 61 Kg.
+Accessori disponibili: staffe Ø78-130mm, Ø105-180mm, Ø125-205mm, staffa superiore universale, staffa sinistrosa, kit 2 morsetti oscillanti.
+
+PROBLEMI COMUNI:
+- Non si aziona → verificare che la gabbia sia COMPLETAMENTE chiusa (interblocco sicurezza obbligatorio), pressione aria min 8 bar
+- Cilindro non scende → valvola di blocco, pressione insufficiente
+- Bracci non si livellano → sistema auto-livellante, pressione non uniforme`;
+
+const KB_HANDY = `HANDY SCAN [14100006]:
+Scanner per lettura profondità battistrada e accettazione veicolo.
+Misura 0-10mm con precisione 0,1mm. Red Laser Class 1 IEC. WiFi. 113 MP. Batteria standby 40h. Fotocamera integrata per riconoscimento targa. Include Handy Scan Manager Software. Peso 415g.
+Per info: cormach@cormachsrl.com | www.cormachsrl.com`;
 
 function selectKB(text) {
   const q = text.toLowerCase();
@@ -197,19 +292,25 @@ function selectKB(text) {
   }
   if (/err\s*0?\d+|errore|dis.?out|lar.?out|no.?stp|no.?spn|shf|w.?guard|no.?vrt|no.?dia|no.?lar|no.?opt/i.test(q)) parts.push(KB_ERRORI);
   if (/vibr|trema|squilibr|runout|centraggio|bilanc|pesa/i.test(q)) parts.push(KB_VIBRAZIONI);
-  if (/smontagomm|puma|ligro|cm.?1200|f.?535|f.?536|aria|cilindro|bead|braccio/i.test(q)) parts.push(KB_SMONTAGOMME);
-  if (/sollevator|ponte|cascos|ilc|colonne|sale|scende|forbicc/i.test(q)) parts.push(KB_SOLLEVATORI);
+  if (/smontagomm|puma|ligro|cm.?1200|f.?535|f.?536|f.?524|f.?528|basic.?1|basic.?2|super.?vigor|tms.?26|ft.?26|ft.?560|ft.?600|aria|cilindro|bead|braccio|torretta|stallona/i.test(q)) parts.push(KB_SMONTAGOMME);
+  if (/sollevator|ponte|cascos|ilc|colonne|sale|scende|forbicc|pfa|wl.?85|l.?3[0-9]{3}|l.?40|l.?45|l.?96|l.?150/i.test(q)) parts.push(KB_SOLLEVATORI);
+  if (/assetto|geo\s*\d|wr.?328|convergenz|inclinaz|caster|toe|camber|allineament/i.test(q)) parts.push(KB_ASSETTI);
+  if (/ammortizzator|smontamm|sa.?1200|sa.?2500/i.test(q)) parts.push(KB_SMONTAMM);
+  if (/handy.?scan|battistrada|profond|targa|scanner/i.test(q)) parts.push(KB_HANDY);
   if (parts.length === 0) parts.push(KB_VIBRAZIONI);
-  return parts.join("\n\n");
+  return parts.join("
+
+");
 }
 
-const SYSTEM_PROMPT = `Sei TechAssist, assistente tecnico per officine meccaniche Cormach (equilibratrici MEC, smontagomme, sollevatori Cascos).
+const SYSTEM_PROMPT = `Sei TechAssist, assistente tecnico per officine meccaniche Cormach.
+Prodotti: equilibratrici MEC (MEC 5/10/20/810/820/1000, Touch MEC, MEC 200 Truck, Moto MEC), smontagomme (CM 1200BB, PUMA, LIGRO, F535S, F536S, F524S, F528S, FT600HY, Super Vigor 60"/2450N, CM Super 56N/27", FT560SN, FT26SN, TMS26, MTB, BASIC 124/224/22BIKE), ponti (PFA 40/50, L3100/L3300/L3300EVO/L3400/L3500EVO, L40/L45, L96 BIKE, L1500A, WL85 MOVE), assetti (WR 328A, GEO 10/15/20), sollevatori Cascos (C-3.2/C-3.5/C-4/C-5/C-5.5/C-125/C430/C440/C450), smontammortizzatori (SA 1200/SA 2500), Handy Scan.
+REGOLA ASSOLUTA: Non indicare MAI prezzi. Per info commerciali rimandare SEMPRE a: cormach@cormachsrl.com | Per assistenza tecnica: service@cormachsrl.com | Sito: www.cormachsrl.com
 Rispondi SEMPRE nella stessa lingua dell'utente.
 Rispondi SOLO in JSON valido senza markdown:
 Se problema tecnico: {"tipo":"diagnosi","priorita":"alta"|"media"|"bassa","causa":"...","azione":"...","steps":["..."],"nota":"...","tags":["..."]}
 Se domanda informativa: {"tipo":"info","risposta":"...","nota":"..."}
-Usa ESATTAMENTE i dati tecnici forniti. Non aggiungere informazioni non presenti.`;
-
+Usa ESATTAMENTE i dati tecnici forniti. Non aggiungere informazioni non presenti.`
 async function callGemini(apiKey, { description, serial, speed, location, axle, centering, precedent, useParams, lang }) {
   const paramsText = useParams
     ? (lang === "en"

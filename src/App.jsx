@@ -304,9 +304,7 @@ function selectKB(text) {
   if (/ammortizzator|smontamm|sa.?1200|sa.?2500/i.test(q)) parts.push(KB_SMONTAMM);
   if (/handy.?scan|battistrada|profond|targa|scanner/i.test(q)) parts.push(KB_HANDY);
   if (parts.length === 0) parts.push(KB_VIBRAZIONI);
-  return parts.join("
-
-");
+  return parts.join("\n\n");
 }
 
 const SYSTEM_PROMPT = `Sei TechAssist, assistente tecnico per officine meccaniche Cormach.

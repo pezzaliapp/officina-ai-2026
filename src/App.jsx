@@ -29,7 +29,7 @@ const T = {
     checklistTitle: "ORDINE OPERATIVO VIBRAZIONI — REGOLA D'ORO",
     checklistItems: [
       ["01","Centraggio","Prima di tutto"],
-      ["02","Ripetibilità","2 lanci → confronto"],
+      ["02","Ripetibilità","2 lanci -> confronto"],
       ["03","Runout cerchio","Soglia 0.5 mm"],
       ["04","Runout gomma","Match-mount se > 1.5 mm"],
       ["05","Veicolo","Solo dopo esclusione ruota"],
@@ -67,7 +67,7 @@ const T = {
     checklistTitle: "VIBRATION OPERATIONAL ORDER — GOLDEN RULE",
     checklistItems: [
       ["01","Centering","First of all"],
-      ["02","Repeatability","2 spins → compare"],
+      ["02","Repeatability","2 spins -> compare"],
       ["03","Rim runout","Threshold 0.5 mm"],
       ["04","Tyre runout","Match-mount if > 1.5 mm"],
       ["05","Vehicle","Only after ruling out wheel"],
@@ -127,162 +127,162 @@ const KB_CALIBRAZIONE = `PROCEDURA CALIBRAZIONE CAR/SUV — MEC 5, MEC 10, MEC 1
 Materiale: ruota equilibrata cerchio ACCIAIO 15" larghezza 6" distanza ~100mm + peso da 50g. NON usare alluminio.
 Passi:
 1. Accendere la macchina, togliere ruota e accessori dall'albero
-2. Premere [F+P3] → display "SER SER" (modalità SERVICE)
-3. Premere [P3] → display "CAL CAr"
-4. Premere [P3] → display "CAL 0"
-5. Abbassare carter → 4 lanci brevi + 1 completo → display "CAL 1"
+2. Premere [F+P3] -> display "SER SER" (modalità SERVICE)
+3. Premere [P3] -> display "CAL CAr"
+4. Premere [P3] -> display "CAL 0"
+5. Abbassare carter -> 4 lanci brevi + 1 completo -> display "CAL 1"
 6. Montare ruota campione, inserire: [P1]=distanza [P2]=larghezza [P3]=diametro, [P4]/[P5] per variare
-7. Abbassare carter → lancio
-8. Ruotare ruota finché display SINISTRO = "50" → applicare 50g lato INTERNO a ore 12
-9. Abbassare carter → lancio
+7. Abbassare carter -> lancio
+8. Ruotare ruota finché display SINISTRO = "50" -> applicare 50g lato INTERNO a ore 12
+9. Abbassare carter -> lancio
 10. Togliere peso interno
-11. Ruotare ruota finché display DESTRO = "50" → applicare 50g lato ESTERNO a ore 12
-12. Abbassare carter → lancio (MEC 20: tenere carter abbassato)
-13. Fine → ritorno automatico NORMAL. Uscita anticipata: [F+P3].`;
+11. Ruotare ruota finché display DESTRO = "50" -> applicare 50g lato ESTERNO a ore 12
+12. Abbassare carter -> lancio (MEC 20: tenere carter abbassato)
+13. Fine -> ritorno automatico NORMAL. Uscita anticipata: [F+P3].`;
 
 const KB_CAL_MOTO = `CALIBRAZIONE MOTO — prerequisito: calibrazione CAR già eseguita. ERR 031 = manca calibrazione MOTO.
 1. Gruppo MOTO sull'albero PERFETTAMENTE VERTICALE
-2. [F+P3] → [P3] → "CAL CAr" → [P4] → "CAL Mot" → [P3] → "CAL 0"
-3. Abbassare carter → lancio
-4. Display "h12 CAL" → peso lato INTERNO, gruppo verticale peso in alto
-5. Abbassare carter → lancio
-6. Display "CAL h12" → peso lato ESTERNO, verticale peso in alto
-7. Abbassare carter → lancio → fine. ERR 043 = non verticale → riposizionare.`;
+2. [F+P3] -> [P3] -> "CAL CAr" -> [P4] -> "CAL Mot" -> [P3] -> "CAL 0"
+3. Abbassare carter -> lancio
+4. Display "h12 CAL" -> peso lato INTERNO, gruppo verticale peso in alto
+5. Abbassare carter -> lancio
+6. Display "CAL h12" -> peso lato ESTERNO, verticale peso in alto
+7. Abbassare carter -> lancio -> fine. ERR 043 = non verticale -> riposizionare.`;
 
 const KB_ERRORI = `CODICI ERRORE MEC:
-ERR 015: tasti premuti all'accensione → rilasciare tutto e riaccendere
-ERR 016 DIS OUT: tastatore distanza non a riposo → riposizionare o [F+P2] per disabilitare
-ERR 017 LAR OUT: tastatore larghezza non a riposo → riposizionare o [F+P2]
-ERR 019 NO CP: processore assente → spegnere/riaccendere
-ERR 020 NO EEP: no comunicazione EEPROM → spegnere/riaccendere
-ERR 021 EEP ERR: dati calibrazione assenti → eseguire calibrazione CAR/SUV e/o MOTO
-ERR 025 SHF IMB: peso presente durante CAL0 → togliere e ripetere
-ERR 026 NO-A: pick-up A assente durante CAL2 → applicare peso e ripetere
-ERR 027 NO-B: pick-up B assente → applicare peso e ripetere
+ERR 015: tasti premuti all'accensione -> rilasciare tutto e riaccendere
+ERR 016 DIS OUT: tastatore distanza non a riposo -> riposizionare o [F+P2] per disabilitare
+ERR 017 LAR OUT: tastatore larghezza non a riposo -> riposizionare o [F+P2]
+ERR 019 NO CP: processore assente -> spegnere/riaccendere
+ERR 020 NO EEP: no comunicazione EEPROM -> spegnere/riaccendere
+ERR 021 EEP ERR: dati calibrazione assenti -> eseguire calibrazione CAR/SUV e/o MOTO
+ERR 025 SHF IMB: peso presente durante CAL0 -> togliere e ripetere
+ERR 026 NO-A: pick-up A assente durante CAL2 -> applicare peso e ripetere
+ERR 027 NO-B: pick-up B assente -> applicare peso e ripetere
 ERR 028 INN IMB: peso interno durante CAL3, deve essere ESTERNO
-ERR 030 CAR CAL: manca calibrazione CAR → eseguire calibrazione CAR/SUV
-ERR 031 MOT CAL: manca calibrazione MOTO → eseguire calibrazione MOTO
-ERR 039 W.GUARD: carter aperto → abbassarlo
-ERR 043 NO VRT: bridà moto non verticale → riposizionare
-ERR 046 NO DIA: tastatore diametro disconnesso → [F+P2]
-ERR 047 NO LAR: tastatore larghezza disconnesso → [F+P2]
+ERR 030 CAR CAL: manca calibrazione CAR -> eseguire calibrazione CAR/SUV
+ERR 031 MOT CAL: manca calibrazione MOTO -> eseguire calibrazione MOTO
+ERR 039 W.GUARD: carter aperto -> abbassarlo
+ERR 043 NO VRT: bridà moto non verticale -> riposizionare
+ERR 046 NO DIA: tastatore diametro disconnesso -> [F+P2]
+ERR 047 NO LAR: tastatore larghezza disconnesso -> [F+P2]
 ERR 055 NO OPT: balourd statico troppo basso per ottimizzazione`;
 
 const KB_VIBRAZIONI = `DIAGNOSI VIBRAZIONI:
-- Solo in frenata → problema freni/disco, NON squilibrio
-- Bassa velocità (<40km/h) → runout cerchio/gomma, non squilibrio
-- Cono standard su alluminio → centraggio errato, usare centratore corretto
-- Dopo urto → verificare cerchio prima di bilanciare
-- Al volante → asse anteriore; al sedile → asse posteriore
+- Solo in frenata -> problema freni/disco, NON squilibrio
+- Bassa velocità (<40km/h) -> runout cerchio/gomma, non squilibrio
+- Cono standard su alluminio -> centraggio errato, usare centratore corretto
+- Dopo urto -> verificare cerchio prima di bilanciare
+- Al volante -> asse anteriore; al sedile -> asse posteriore
 Ordine: 1.Centraggio 2.Ripetibilità 3.Runout cerchio 4.Runout gomma 5.Veicolo`;
 
 const KB_SMONTAGOMME = `SMONTAGOMME CORMACH — MODELLI E DATI TECNICI:
-Prezzi sempre su richiesta → cormach@cormachsrl.com | www.cormachsrl.com
+Prezzi sempre su richiesta -> cormach@cormachsrl.com | www.cormachsrl.com
 
-⚠️ CORMACH PRODUCE E VENDE SMONTAGOMME per auto, moto e camion.
+!! CORMACH PRODUCE E VENDE SMONTAGOMME per auto, moto e camion.
 Gamma completa: da entry-level (BASIC 124/224) a superautomatici run flat (CM 1200BB, PUMA, LIGRO, F536S GT RACING), per moto (F 26A/F 24 BIKE), per camion (FT 600 HY, Super Vigor 60"/2450N, CM Super 56N/27", FT 560SN, FT 26SN, TMS 26").
 
 SMONTAGOMME AUTO:
-• CM 1200BB MI [00100210]: superautomatico ribassati/run flat/canale rovescio. Doppio disco stallonatura (BB). Ø max 1080mm. Cerchio 12"-28". Forza 5500N. 8-10 BAR. 400 Kg.
-• PUMA MI [00100208]: superautomatico ribassati/run flat. Ø max 1200mm. Cerchio 12"-30". Forza 7600N. Ribaltamento furgoni opzionale. 328 Kg.
-• LIGRO MI [00100347] / LIGRO GT MI [00100348]: automatico. Asta Ø38mm. Cerchi 10"-26". Bloccaggio 10"-24" est / 13"-26" int. Forza 2800 Kg. 256/269 Kg.
-• F 536S GT RACING MI [00100301]: automatico ribassati/run flat/sportivi. Asta Ø45mm. Cerchi 12"-26". 3000 Kg. 318 Kg.
-• F 528S GT MI [00100365]: semiautomatico braccio bandiera. Asta Ø45mm. Cerchi 12"-30". Motoinverter. 240 Kg.
-• F 535S [00100330] / F 535S GT [00100331]: automatico. Asta Ø45mm. Cerchi 10"-24". 2500 Kg. 238-249 Kg.
-• F 524S [00100321]: automatico. Asta Ø41mm. Cerchi 10"-24". Singola/doppia velocità o MI. 211-222 Kg.
-• F 524 SW [00100323]: semiautomatico braccio bandiera manuale. Cerchi 10"-24". 191 Kg.
-• BASIC 124 [00101082]: semiautomatico. Cerchi 10"-20". 215 Kg.
-• BASIC 224 [00101084]: automatico. Cerchi 10"-20". 307 Kg.
+- CM 1200BB MI [00100210]: superautomatico ribassati/run flat/canale rovescio. Doppio disco stallonatura (BB). Ø max 1080mm. Cerchio 12"-28". Forza 5500N. 8-10 BAR. 400 Kg.
+- PUMA MI [00100208]: superautomatico ribassati/run flat. Ø max 1200mm. Cerchio 12"-30". Forza 7600N. Ribaltamento furgoni opzionale. 328 Kg.
+- LIGRO MI [00100347] / LIGRO GT MI [00100348]: automatico. Asta Ø38mm. Cerchi 10"-26". Bloccaggio 10"-24" est / 13"-26" int. Forza 2800 Kg. 256/269 Kg.
+- F 536S GT RACING MI [00100301]: automatico ribassati/run flat/sportivi. Asta Ø45mm. Cerchi 12"-26". 3000 Kg. 318 Kg.
+- F 528S GT MI [00100365]: semiautomatico braccio bandiera. Asta Ø45mm. Cerchi 12"-30". Motoinverter. 240 Kg.
+- F 535S [00100330] / F 535S GT [00100331]: automatico. Asta Ø45mm. Cerchi 10"-24". 2500 Kg. 238-249 Kg.
+- F 524S [00100321]: automatico. Asta Ø41mm. Cerchi 10"-24". Singola/doppia velocità o MI. 211-222 Kg.
+- F 524 SW [00100323]: semiautomatico braccio bandiera manuale. Cerchi 10"-24". 191 Kg.
+- BASIC 124 [00101082]: semiautomatico. Cerchi 10"-20". 215 Kg.
+- BASIC 224 [00101084]: automatico. Cerchi 10"-20". 307 Kg.
 
 SMONTAGOMME MOTO:
-• F 26A BIKE [00100299]: automatico. Cerchi 6"-26". Kit 4 adattatori moto inclusi. 250 Kg.
-• F 24 BIKE [00101056]: semiautomatico braccio bandiera. Cerchi 6"-24". 174 Kg.
-• BASIC 22 BIKE [00101081]: semiautomatico. Cerchi 8"-22". 190 Kg.
+- F 26A BIKE [00100299]: automatico. Cerchi 6"-26". Kit 4 adattatori moto inclusi. 250 Kg.
+- F 24 BIKE [00101056]: semiautomatico braccio bandiera. Cerchi 6"-24". 174 Kg.
+- BASIC 22 BIKE [00101081]: semiautomatico. Cerchi 8"-22". 190 Kg.
 
 SMONTAGOMME CAMION:
-• FT 600 HY [00201030]: automatico. Cerchi 14"-60". Wireless WiFi. 2200 Kg.
-• SUPER VIGOR 60" [00200037]: automatico. Cerchi 14"-60". Piattaforma inclusa. 1400 Kg.
-• SUPER VIGOR 2450N [00200034]: automatico. Cerchi 14"-56". Stand-by energetico. 1200 Kg.
-• CM SUPER 56N [00200025]: semiautomatico. Cerchi 14"-56". 740 Kg.
-• FT 560SN [00201023]: semiautomatico. Cerchi 14"-56". 728 Kg.
-• CM SUPER 27" [00200013]: semiautomatico. Cerchi 13"-27". Struttura compatta mobile. 560 Kg.
-• FT 26SN [00201025]: semiautomatico. Cerchi 14"-26". 586 Kg.
-• TMS 26" [00201022]: per furgoni attrezzati. Cerchi 13"-26". Anche con compressore+generatore diesel.
-• MTB [01201003]: equilibratrice universale per smontagomme camion. Programmi Dinamica/Statica/ALU. 12dc/230V. 20 Kg.
+- FT 600 HY [00201030]: automatico. Cerchi 14"-60". Wireless WiFi. 2200 Kg.
+- SUPER VIGOR 60" [00200037]: automatico. Cerchi 14"-60". Piattaforma inclusa. 1400 Kg.
+- SUPER VIGOR 2450N [00200034]: automatico. Cerchi 14"-56". Stand-by energetico. 1200 Kg.
+- CM SUPER 56N [00200025]: semiautomatico. Cerchi 14"-56". 740 Kg.
+- FT 560SN [00201023]: semiautomatico. Cerchi 14"-56". 728 Kg.
+- CM SUPER 27" [00200013]: semiautomatico. Cerchi 13"-27". Struttura compatta mobile. 560 Kg.
+- FT 26SN [00201025]: semiautomatico. Cerchi 14"-26". 586 Kg.
+- TMS 26" [00201022]: per furgoni attrezzati. Cerchi 13"-26". Anche con compressore+generatore diesel.
+- MTB [01201003]: equilibratrice universale per smontagomme camion. Programmi Dinamica/Statica/ALU. 12dc/230V. 20 Kg.
 
 PROBLEMI COMUNI SMONTAGOMME:
-- Perdita aria cilindro → guarnizioni usurate, raccordi allentati. Verificare pressione min 8 bar.
-- Braccio non scende → pressione bassa (<8 bar), blocco meccanico, olio esaurito
-- Testa non ruota → motore, cinghia, finecorsa
-- Bead breaker non funziona → pressione insufficiente, usura lame
-- Torretta bloccata → valvola comando pneumatico, perdita pressione, lubrificazione`;
+- Perdita aria cilindro -> guarnizioni usurate, raccordi allentati. Verificare pressione min 8 bar.
+- Braccio non scende -> pressione bassa (<8 bar), blocco meccanico, olio esaurito
+- Testa non ruota -> motore, cinghia, finecorsa
+- Bead breaker non funziona -> pressione insufficiente, usura lame
+- Torretta bloccata -> valvola comando pneumatico, perdita pressione, lubrificazione`;
 
 const KB_SOLLEVATORI = `SOLLEVATORI E PONTI CORMACH — DATI TECNICI:
-Prezzi sempre su richiesta → cormach@cormachsrl.com | www.cormachsrl.com
+Prezzi sempre su richiesta -> cormach@cormachsrl.com | www.cormachsrl.com
 
-⚠️ CORMACH PRODUCE E VENDE PONTI SOLLEVATORI per assetto ruote e per officina.
+!! CORMACH PRODUCE E VENDE PONTI SOLLEVATORI per assetto ruote e per officina.
 Gamma ponti Cormach: PFA 40, PFA 50 (ponti forbice per assetto ruote), L 3100/L 3300/L 3300 EVO/L 3400/L 3500 EVO (ponti doppia forbice ribassati per officina, altezza sollevamento fino a 1900mm, capacità da 3000 a 4000 Kg), L 40/L 45 (ponti a 2 colonne), WL 85 MOVE (colonne mobili), L 96 BIKE (per moto).
 
 PONTI PER ASSETTO RUOTE (forbice con libera-ruote):
-• PFA 40 [05100369]: capacità 4000 Kg. Alt max 2160mm, min 290mm. Pedane 4800mm. Sollevatore Lift Tables 4000 Kg integrato, apertura 1500-2000mm. 400V 3ph. 6-8 bar. 2510 Kg. Fotocellula sicurezza, livellamento automatico, predisposto assetto 3D, pompa manuale emergenza, canaline+tasselli inclusi. Colore grigio RAL7016 + rampe gialle da mag 2024.
-• PFA 50 [05100367]: come PFA 40 ma capacità 5000 Kg. Pedane 5000mm. Apertura 1600-2200mm. 2600 Kg.
+- PFA 40 [05100369]: capacità 4000 Kg. Alt max 2160mm, min 290mm. Pedane 4800mm. Sollevatore Lift Tables 4000 Kg integrato, apertura 1500-2000mm. 400V 3ph. 6-8 bar. 2510 Kg. Fotocellula sicurezza, livellamento automatico, predisposto assetto 3D, pompa manuale emergenza, canaline+tasselli inclusi. Colore grigio RAL7016 + rampe gialle da mag 2024.
+- PFA 50 [05100367]: come PFA 40 ma capacità 5000 Kg. Pedane 5000mm. Apertura 1600-2200mm. 2600 Kg.
 
 PONTI FORBICE RIBASSATI:
-• L 3500 EVO [05100353/05100368]: 3500 Kg. Alt 105-1900mm. 400V/230V. 50 sec. 1090 Kg. Prolunghe estraibili. Telaio incasso disponibile.
-• L 3400 [05100316/05100324]: 4000 Kg. Alt 105-1900mm. 400V/230V. 60 sec. 1035 Kg. Rampe basculanti. Colore grigio RAL7016 da mag 2024.
-• L 3300 EVO [05100285/05100322]: 3000 Kg. Alt 112-1900mm. 400V/230V. 55 sec. 830 Kg. Per city cars. Rampe removibili. Telaio incasso disponibile.
-• L 3300 [05100319/05100323]: 3000 Kg. Alt 116-1900mm. 400V/230V. 55 sec. 830 Kg. Colore grigio RAL7016 da mag 2024.
-• L 3100 [05100351/05100377]: 3200 Kg. Alt 110-1000mm. 400V 3ph. 40 sec. 569 Kg. Ideale gommisti/carrozzerie.
-• L 1500 AUTOMATIC [05100342]: mobile a forbice. 1500 Kg. Alt 740-1800mm. 230V. 29 sec. 750 Kg. Inclinazione ±6° via telecomando. Per motori e batterie.
+- L 3500 EVO [05100353/05100368]: 3500 Kg. Alt 105-1900mm. 400V/230V. 50 sec. 1090 Kg. Prolunghe estraibili. Telaio incasso disponibile.
+- L 3400 [05100316/05100324]: 4000 Kg. Alt 105-1900mm. 400V/230V. 60 sec. 1035 Kg. Rampe basculanti. Colore grigio RAL7016 da mag 2024.
+- L 3300 EVO [05100285/05100322]: 3000 Kg. Alt 112-1900mm. 400V/230V. 55 sec. 830 Kg. Per city cars. Rampe removibili. Telaio incasso disponibile.
+- L 3300 [05100319/05100323]: 3000 Kg. Alt 116-1900mm. 400V/230V. 55 sec. 830 Kg. Colore grigio RAL7016 da mag 2024.
+- L 3100 [05100351/05100377]: 3200 Kg. Alt 110-1000mm. 400V 3ph. 40 sec. 569 Kg. Ideale gommisti/carrozzerie.
+- L 1500 AUTOMATIC [05100342]: mobile a forbice. 1500 Kg. Alt 740-1800mm. 230V. 29 sec. 750 Kg. Inclinazione ±6° via telecomando. Per motori e batterie.
 
 PONTI 2 COLONNE:
-• L 40 [05100361]: 4000 Kg. Bracci 98-1900mm (con prolunga 2850mm). 400V 3ph. 45 sec. 190 bar. 670 Kg. Passaggio 2600mm. Bracci telescopici.
-• L 45 [05100360]: 4500 Kg. Bracci 98-1900mm (con prolunga 5000mm). 400V 3ph. 60 sec. 830 Kg. Passaggio 2600mm.
+- L 40 [05100361]: 4000 Kg. Bracci 98-1900mm (con prolunga 2850mm). 400V 3ph. 45 sec. 190 bar. 670 Kg. Passaggio 2600mm. Bracci telescopici.
+- L 45 [05100360]: 4500 Kg. Bracci 98-1900mm (con prolunga 5000mm). 400V 3ph. 60 sec. 830 Kg. Passaggio 2600mm.
 
 COLONNE MOBILI:
-• WL 85 MOVE [05100354]: 8500 Kg/colonna. Alt max 1750mm. Forche 204-624mm. WiFi. Touch LCD. Sincronizzazione ±50mm. Batteria 80AH. Modulare 4-16 colonne. 2,2 kW.
+- WL 85 MOVE [05100354]: 8500 Kg/colonna. Alt max 1750mm. Forche 204-624mm. WiFi. Touch LCD. Sincronizzazione ±50mm. Batteria 80AH. Modulare 4-16 colonne. 2,2 kW.
 
 PONTI PER MOTO:
-• L 96 PE BIKE [05100008]: a pedale (no elettrico). 500 Kg. Alt 140-1000mm. 135 Kg.
-• L 96 EL BIKE [05100009]: elettroidraulico. 500 Kg. Alt 140-1000mm. 230V. 10-12 sec. 150 Kg.
+- L 96 PE BIKE [05100008]: a pedale (no elettrico). 500 Kg. Alt 140-1000mm. 135 Kg.
+- L 96 EL BIKE [05100009]: elettroidraulico. 500 Kg. Alt 140-1000mm. 230V. 10-12 sec. 150 Kg.
 
 SOLLEVATORI CASCOS (ponti 2 colonne):
 Modelli: C-3.2, C-3.5, C-4, C-5, C-5.5, C-125, C430/C440/C450 — con o senza pedana, con ILC (syncro)
-- Non sale/sale storto → livello olio basso, ILC non sincronizzato, sicurezze attivate
-- Bloccato → sblocco manuale emergenza (vedi manuale modello specifico)
-- Rumore anomalo → cuscinetti, pompa idraulica, livello olio
-- ILC non sincronizza → batteria, sensori livello, firmware
+- Non sale/sale storto -> livello olio basso, ILC non sincronizzato, sicurezze attivate
+- Bloccato -> sblocco manuale emergenza (vedi manuale modello specifico)
+- Rumore anomalo -> cuscinetti, pompa idraulica, livello olio
+- ILC non sincronizza -> batteria, sensori livello, firmware
 
 PROBLEMI COMUNI PONTI/SOLLEVATORI:
-- PFA 40/50 non si livella → fotocellula sicurezza, sistema livellamento automatico, centralina
-- Ponte forbice non scende → valvola controllo discesa, olio, valvola paracadute
-- Colonne WL85 non sincronizzano → batteria scarica, sensori, firmware
-- L 40/L 45 sale storto → cavo acciaio sincronizzazione, olio nelle colonne`;
+- PFA 40/50 non si livella -> fotocellula sicurezza, sistema livellamento automatico, centralina
+- Ponte forbice non scende -> valvola controllo discesa, olio, valvola paracadute
+- Colonne WL85 non sincronizzano -> batteria scarica, sensori, firmware
+- L 40/L 45 sale storto -> cavo acciaio sincronizzazione, olio nelle colonne`;
 
 const KB_ASSETTI = `ASSETTI RUOTE CORMACH — DATI TECNICI:
-Prezzi sempre su richiesta → cormach@cormachsrl.com | www.cormachsrl.com
+Prezzi sempre su richiesta -> cormach@cormachsrl.com | www.cormachsrl.com
 
-• WR 328A [03100074]: CCD, monitor LCD, radio 2,4 GHz, 8 sensori. Banca dati veicoli personalizzabile. Programmi: volanti storti, spoiler, 2x fuori centro. Predisposto camion/rimorchi. 118 Kg.
-• GEO 10 [03100094]: CCD, monitor LCD, radio 2,4 GHz, livelle elettroniche su ogni sensore. Banca dati 40.000 veicoli. Kit 4 attacchi 11"-26" inclusi. 149 Kg.
-• GEO 15 [03100077/03100081/03100090]: 3D, monitor 27", Drive-On Assistant incluso standard, target a scacchiera antiriflesso. Kit 4 attacchi 11"-26" inclusi. Versioni: Standard, FLAT 2VD (2 monitor), SMART (senza Drive-On).
-• GEO 20 [03100085/03100086]: 3D alta risoluzione, monitor 27". Target leggeri antiriflesso. Kit 4 attacchi 11"-26" e 2 piattelli girevoli inclusi. Drive-On-Assistant e Up&Down opzionali. 222 Kg. Versione 2VD con 2 monitor disponibile.
+- WR 328A [03100074]: CCD, monitor LCD, radio 2,4 GHz, 8 sensori. Banca dati veicoli personalizzabile. Programmi: volanti storti, spoiler, 2x fuori centro. Predisposto camion/rimorchi. 118 Kg.
+- GEO 10 [03100094]: CCD, monitor LCD, radio 2,4 GHz, livelle elettroniche su ogni sensore. Banca dati 40.000 veicoli. Kit 4 attacchi 11"-26" inclusi. 149 Kg.
+- GEO 15 [03100077/03100081/03100090]: 3D, monitor 27", Drive-On Assistant incluso standard, target a scacchiera antiriflesso. Kit 4 attacchi 11"-26" inclusi. Versioni: Standard, FLAT 2VD (2 monitor), SMART (senza Drive-On).
+- GEO 20 [03100085/03100086]: 3D alta risoluzione, monitor 27". Target leggeri antiriflesso. Kit 4 attacchi 11"-26" e 2 piattelli girevoli inclusi. Drive-On-Assistant e Up&Down opzionali. 222 Kg. Versione 2VD con 2 monitor disponibile.
 
 PROBLEMI COMUNI ASSETTI:
-- Sensori non comunicano → batterie Ni-MH scariche, interferenze radio 2,4 GHz, canale occupato
-- Dati non plausibili → piattelli girevoli non posizionati, blocca freno/sterzo non inseriti, sensori mal posizionati
-- Banca dati obsoleta → procedura aggiornamento da USB (accessorio opzionale)`;
+- Sensori non comunicano -> batterie Ni-MH scariche, interferenze radio 2,4 GHz, canale occupato
+- Dati non plausibili -> piattelli girevoli non posizionati, blocca freno/sterzo non inseriti, sensori mal posizionati
+- Banca dati obsoleta -> procedura aggiornamento da USB (accessorio opzionale)`;
 
 const KB_SMONTAMM = `SMONTAMMORTIZZATORI CORMACH — DATI TECNICI:
-Prezzi sempre su richiesta → cormach@cormachsrl.com | www.cormachsrl.com
+Prezzi sempre su richiesta -> cormach@cormachsrl.com | www.cormachsrl.com
 
-• SA 1200 [36100002]: 1,2 ton. Pneumatico. Bracci superiori auto-livellanti. Cilindro alluminio/nylon/fibra vetro (anti-corrosione). Valvola interblocco: funziona SOLO con gabbia completamente chiusa. 2 valvole di blocco cilindro. Corsa 330mm. 8 bar. 611x556x1690mm. 55 Kg.
-• SA 2500 [36100003]: 2,5 ton. Stesse caratteristiche SA 1200. 61 Kg.
+- SA 1200 [36100002]: 1,2 ton. Pneumatico. Bracci superiori auto-livellanti. Cilindro alluminio/nylon/fibra vetro (anti-corrosione). Valvola interblocco: funziona SOLO con gabbia completamente chiusa. 2 valvole di blocco cilindro. Corsa 330mm. 8 bar. 611x556x1690mm. 55 Kg.
+- SA 2500 [36100003]: 2,5 ton. Stesse caratteristiche SA 1200. 61 Kg.
 Accessori disponibili: staffe Ø78-130mm, Ø105-180mm, Ø125-205mm, staffa superiore universale, staffa sinistrosa, kit 2 morsetti oscillanti.
 
 PROBLEMI COMUNI:
-- Non si aziona → verificare che la gabbia sia COMPLETAMENTE chiusa (interblocco sicurezza obbligatorio), pressione aria min 8 bar
-- Cilindro non scende → valvola di blocco, pressione insufficiente
-- Bracci non si livellano → sistema auto-livellante, pressione non uniforme`;
+- Non si aziona -> verificare che la gabbia sia COMPLETAMENTE chiusa (interblocco sicurezza obbligatorio), pressione aria min 8 bar
+- Cilindro non scende -> valvola di blocco, pressione insufficiente
+- Bracci non si livellano -> sistema auto-livellante, pressione non uniforme`;
 
 const KB_HANDY = `HANDY SCAN [14100006]:
 Scanner per lettura profondità battistrada e accettazione veicolo.
@@ -488,7 +488,7 @@ export default function App() {
               <>
                 <div className="key-panel-title">{t.keyTitle}</div>
                 <div className="key-panel-hint">
-                  {t.keyHint} <a href="https://aistudio.google.com" target="_blank" rel="noreferrer">aistudio.google.com</a> → Get API Key. {t.keySaved}
+                  {t.keyHint} <a href="https://aistudio.google.com" target="_blank" rel="noreferrer">aistudio.google.com</a> -> Get API Key. {t.keySaved}
                 </div>
                 <div className="key-input-row">
                   <input type={keyVisible ? "text" : "password"} className="key-input" placeholder="AIzaSy..."
